@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="logincard">
+        <div class="headinglogin">
+            <h4>Login</h4>
+        </div>
+        <div class="signinfields center">
+            <div class="inputandlabel">
+               <input placeholder="Email" id="EmailID" class="inputfields" type="email"> <i class="emailicon fa-thin fa-at"></i></input>
+                <label class="emaillabel labeltext" for="EmailID">Email</label>
+                <input placeholder="Password" id="passID" class="inputfields" type="password"><i class="passwordicon fa-thin fa-key"></i><i id="passwordEye" class="fa-solid fa-eye"></i></input>
+                <label class="passlabel labeltext" for="passID">Password</label>
+            </div>
+            <div class="forgerpassword">
+                <h6 class="right forgetheading">forget password?</h6>
+            </div>
+            <div class="loginbutondiv"><button class="loginbutton" id="loginbuttonID">Login</button></div>
+            <div class="createaccountdiv"><a href='./signup/signup.html'><h6 class="registerclass" id="registerID">Create Your Account</h6></a></div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="./signup/firebase1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

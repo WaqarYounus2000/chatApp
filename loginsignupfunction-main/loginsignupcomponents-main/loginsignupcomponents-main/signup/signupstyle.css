@@ -1,0 +1,328 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 100vw;
+    height: 100vh;
+}
+.alternatebody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.forgerpassword {
+    width: 80%;
+    /* border: 2px solid red; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* width: 90%; */
+
+}
+
+.logincard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 280px;
+    font-family: Arial !important;
+    border-top: 4px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+
+
+
+.forgetheading {
+    margin: 0;
+    padding: 0;
+}
+
+.loginbutondiv {
+    margin-top: 0px;
+    width: 100%;
+}
+
+.loginbutton:hover {
+    cursor: pointer;
+    background-color: rgb(12, 12, 189);
+}
+
+.loginbutton {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    outline: none;
+    color: white;
+    /* background-image: url('../images/loader.gif'); */
+    
+}
+
+/* /////////////////////////place holder css////////////////////// */
+
+
+.emaillabel {
+    position: absolute;
+    top: 25px;
+    left: 54px;
+    /* font-size: 15px; */
+    font-size: 0.9em;
+
+}
+
+.passlabel {
+    position: absolute;
+    left: 56px;
+    bottom: 26px;
+    font-size: 0.82em;
+}
+
+.labeltext {
+    transition: all 0.3s;
+    z-index: -5;
+}
+
+.inputfields {
+    padding: 10px;
+    margin: 14px;
+    width: 200px;
+}
+
+
+.inputandlabel {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 86%;
+}
+
+
+
+::placeholder {
+    margin: 12px;
+    transition: all 0.3s;
+    font-family: Arial !important;
+    padding: 15px;
+
+}
+
+
+
+
+#EmailID:focus~.emaillabel {
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(-28px);
+    z-index: 0;
+
+}
+
+#passID:focus~.passlabel {
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(-30px);
+    z-index: 0;
+
+}
+
+.inputandlabel>input:focus {
+    outline: none;
+
+}
+
+.inputandlabel>input:focus::placeholder {
+    transform: translateY(-28px);
+    transition: all 0.3s;
+}
+
+
+#EmailID {
+    position: relative;
+}
+#passID {
+    position: relative;
+}
+
+.emailicon {
+    position: absolute;
+    top: 24px;
+    left: 21px;
+}
+.passwordicon{
+    position: absolute;
+    top: 93px;
+    left: 21px;
+
+}
+input[type=email]{
+    padding-left: 25px;
+}
+input[type=password]{
+    padding-left: 25px;
+}
+/* //////////////////////////////////// */
+
+.createaccountdiv h6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbutondiv {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbutondiv a{
+    
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+}
+.loginbutondiv a h6{
+    padding: 0px;
+    color: black;
+}
+.loginbutondiv a h6:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* /////////////////////////////////////// signup finish///////////////////////////////////////// */
+.birthdate{
+    margin-top: 12px;
+    border: 2px solid  rgb(133, 133, 133);
+    padding: 7px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+input[type="date" i] {
+    border: none;
+}
+
+.genderdiv{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    width: 80%;
+
+}
+
+.next{
+    display: flex;
+    justify-content: end;
+    padding: 7px;
+    width: 80%;
+    margin-top: 20px;
+
+}
+.buttonrightarrow{
+    background-color: transparent;
+    border: none;
+}
+.nextbutton{
+    opacity: 0.4;
+    font-size: 20px;
+}
+.nextbutton:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#card1{
+    display: none;
+}
+.leftarrow{
+    opacity: 0.3;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 90%;
+}
+.leftarrow:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.phonenumber{
+    /* border: 2px solid red; */
+    margin-top: 24px;
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#phone{
+    padding: 8px;
+    width: 100%;
+}
+
+#phone:focus{
+    /* border: none; */
+    outline: none;
+}
+
+#fathernameID{
+    width: 93%;
+}
+#fullname{
+    width: 93%;
+}
+.div1{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+.div2{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+
+.inputclass{
+    width: 100%;
+    padding: 7px;
+}
+
+input.inputclass{
+    padding-left: 3px;
+}
+
+

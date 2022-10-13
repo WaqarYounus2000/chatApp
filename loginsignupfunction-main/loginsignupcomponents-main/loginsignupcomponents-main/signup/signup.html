@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="signupstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <divc class="alternatebody">
+
+
+
+        <div class="logincard card1" id="card1">
+            <div id="leftarrowbutton" class="leftarrow"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="headinglogin">
+                <h4>Sign up Here!</h4>
+            </div>
+            <div class="signinfields center">
+
+                <div class="inputandlabel">
+                    <input placeholder="Email" id="EmailID" class="inputfields" type="email"> <i
+                        class="emailicon fa-thin fa-at"></i></input>
+                    <label class="emaillabel labeltext" for="EmailID">Email</label>
+                    <input placeholder="Password" id="passID" class="inputfields" type="password"><i
+                        class="passwordicon fa-thin fa-key"></i><i id="passwordEye" class="fa-solid fa-eye"></i></input>
+                    <label class="passlabel labeltext" for="passID">Password</label>
+                </div>
+                <div class="forgerpassword">
+                    <h6 class="right forgetheading">forget password?</h6>
+                </div>
+                <div class="createaccountdiv">
+                    <h6> <input type="checkbox" id="checkboxID"> I agree with all <strong> Term of Use & Privacy
+                            Policy</strong></h6>
+                </div>
+                <div class="loginbutondiv"><button class="loginbutton " id="signupbuttonID">  Register</button></div>
+                <div class="loginbutondiv"><a href="../index.html">
+                        <h6>Log in</h6>
+                    </a></div>
+
+            </div>
+
+        </div>
+
+        <div class="logincard card2" id="card2">
+
+            <div class="headinglogin">
+                <h4>Sign up Here!</h4>
+            </div>
+            <div class="signinfields center">
+                <div class="inputandlabel">
+                    <div class="div1">
+                        <label  type="text" for="fullname">Full Name</label>
+                        <input placeholder="Full Name" class="inputclass" type="text" id="fullname">
+
+                    </div>
+                    <div class="div2">
+                        <label for="fathernameID">Father Name</label>
+                        <input class="inputclass" placeholder="Father Name" type="text" id="fathernameID">
+
+                    </div>
+                </div>
+                <div class="birthdate">
+                    <label for="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate">
+
+                </div>
+
+                <div class="phonenumber">
+                    <!-- <label for="phone">Contact</label> -->
+                    <input placeholder="Phone" type="text" id="phone">
+                </div>
+
+
+                <div class="genderdiv">
+                    <label for="gender">Gender: </label>
+
+                    <label for="male">Male</label>
+                    <input name="gendervalue" id="male" type="radio">
+                    <label for="female">Female</label>
+                    <input name="gendervalue" id="female" type="radio">
+                </div>
+
+                <div class="next">
+                    <button class="buttonrightarrow"><i class="nextbutton fa-solid fa-arrow-right"
+                            id="rightarrobutton"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+
+
+        <script type="module" src="app.js"></script>
+        <script type="module" src="./firebase1.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
