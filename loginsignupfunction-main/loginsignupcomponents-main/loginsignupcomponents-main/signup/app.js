@@ -1,4 +1,4 @@
-import { signupfunction } from './firebase1.js'
+import { signupfunction,getalldatafromfirbase } from './firebase1.js'
 
 
 
@@ -30,6 +30,12 @@ signupbutton.onclick = () => {
 
 }
 
+
+
+
+
+
+getalldatafromfirbase();
 /////////////////////////////////////////////////////////////////////////////////////////
 
 

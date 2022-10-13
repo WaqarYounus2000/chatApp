@@ -1,4 +1,4 @@
-import { observer, userlogoutfunction } from './signup/firebase1.js';
+import { observer, userlogoutfunction, getalldatafromfirbase } from './signup/firebase1.js';
 let section1 = document.getElementById('section1ID');
 var mydata = localStorage.getItem('mydata');
 var mydata = JSON.parse(mydata);
@@ -33,3 +33,15 @@ logoutbuttonID.onclick = () => {
 
 
 
+let alldata = getalldatafromfirbase();
+alldata.then((data) => {
+
+    data.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data().Fullname}`);
+
+    });
+})
+
+
+
+// console.log(alldata)

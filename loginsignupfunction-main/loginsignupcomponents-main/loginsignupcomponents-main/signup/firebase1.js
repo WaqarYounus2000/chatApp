@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
-import { doc, setDoc, getDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { doc, setDoc, getDoc, getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 const firebaseConfig = {
     apiKey: "AIzaSyBd4jTG7RWe6guSsNMwCESg-SmgEygcR2c",
     authDomain: "loginsignup-eef41.firebaseapp.com",
@@ -97,7 +97,7 @@ function Loginfunction(email, password) {
     })
 }
 
-function userlogoutfunction(){
+function userlogoutfunction() {
     auth.signOut().then(() => {
         alert('user logging out...')
         window.location.replace('./index.html')
@@ -105,7 +105,20 @@ function userlogoutfunction(){
 
 }
 
+async function getalldatafromfirbase() {
 
+        const querySnapshot = await getDocs(collection(db, "users"));
+        // console.log(querySnapshot)
+        return querySnapshot
+        
+        
+       
+
+    
+
+
+
+}
 
 
 
@@ -117,20 +130,22 @@ function observer() {
                 if (users.emailVerified === true) {
                     console.log(users.emailVerified)
                     console.log(users)
-                    myResolve(()=>{
-                        return true})
-                    
+                    myResolve(() => {
+                        return true
+                    })
+
                 }
                 else {
                     console.log(users)
-                    myReject(()=>{
-                        return false})
-                    
+                    myReject(() => {
+                        return false
+                    })
+
                 }
 
 
-            } 
-           
+            }
+
         });
 
     }
@@ -148,4 +163,4 @@ function observer() {
 
 
 
-export { signupfunction, Loginfunction, observer,userlogoutfunction}
+export { signupfunction, Loginfunction, observer, userlogoutfunction, getalldatafromfirbase }

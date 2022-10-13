@@ -87,3 +87,16 @@ footer{
     justify-content: center;
 
 }
+
+.main_container{
+    border: 2px solid red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.aside1{
+    height: 100%;
+    width: 25%;
+    border: 2px solid black;
+}
