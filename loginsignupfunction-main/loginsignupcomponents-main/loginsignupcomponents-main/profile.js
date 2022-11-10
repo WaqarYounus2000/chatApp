@@ -1,5 +1,7 @@
 import { observer, userlogoutfunction, getalldatafromfirbase } from './signup/firebase1.js';
 let section1 = document.getElementById('section1ID');
+let dropdownID = document.getElementById('dropdownID');
+let all_chats_contactID = document.getElementById('all_chats_contactID');
 var mydata = localStorage.getItem('mydata');
 var mydata = JSON.parse(mydata);
 
@@ -7,15 +9,36 @@ var mydata = JSON.parse(mydata);
 
 let stateobserver = observer()
 stateobserver.then(() => {
+
+    let alldata = getalldatafromfirbase();
+    alldata.then((data) => {
+        data.forEach((doc) => {
+            // if (data[UserID] == doc.id) {
+
+            // }
+            
+            all_chats_contactID.innerHTML += `<li class='alluserfromDB'>${doc.id}==> ${doc.data().Fullname}</li>`;
+        });
+    })
+
+
+
+
+
     document.getElementById('titleID').innerHTML += ` ${(mydata.Fullname).toUpperCase()}`;
     for (const key in mydata) {
         if (mydata.hasOwnProperty(key)) {
-            section1.innerHTML += `<h3>${key}: ${mydata[key]}</h3>`;
+            if (key != "Password" && key != "Fullname") {
+
+                dropdownID.innerHTML += `<li class="dropdownli">${key}: ${mydata[key]}</li>`;
+                console.log(key + "++++----///")
+            }
         }
     }
 
 
 }).catch(() => {
+    document.getElementById('main_containerID').style.display = 'none';
     let bodY = document.getElementById('sectionerrorheadingID');
     bodY.style.display = 'flex'
     bodY.innerHTML += '<h3 style="color:red;">Verification Error!</h3>';
@@ -33,15 +56,7 @@ logoutbuttonID.onclick = () => {
 
 
 
-let alldata = getalldatafromfirbase();
-alldata.then((data) => {
-
-    data.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().Fullname}`);
-
-    });
-})
 
 
 
-// console.log(alldata)
+

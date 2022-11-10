@@ -37,6 +37,7 @@ function signupfunction(email, password, fullname, fathername, dateofbirth, phon
                 Password: password,
                 Dateofbirth: dateofbirth,
                 Phonenumber: phonenumber,
+                UserID:user.uid,
             });
             swal("Congratulation!", "Your Account Has been Created Successfully!", "success");
             sendEmailVerification(auth.currentUser)
@@ -129,7 +130,7 @@ function observer() {
                 const uid = users.uid;
                 if (users.emailVerified === true) {
                     console.log(users.emailVerified)
-                    console.log(users)
+                    console.log("users",users)
                     myResolve(() => {
                         return true
                     })
