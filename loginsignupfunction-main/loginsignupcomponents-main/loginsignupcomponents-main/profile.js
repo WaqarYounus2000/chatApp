@@ -13,11 +13,11 @@ stateobserver.then(() => {
     let alldata = getalldatafromfirbase();
     alldata.then((data) => {
         data.forEach((doc) => {
-            // if (data[UserID] == doc.id) {
+            if (mydata.UserID != doc.id) {
+                all_chats_contactID.innerHTML += `<li class='alluserfromDB'>${doc.id}==> ${doc.data().Fullname}</li>`;
 
-            // }
+            }
             
-            all_chats_contactID.innerHTML += `<li class='alluserfromDB'>${doc.id}==> ${doc.data().Fullname}</li>`;
         });
     })
 
